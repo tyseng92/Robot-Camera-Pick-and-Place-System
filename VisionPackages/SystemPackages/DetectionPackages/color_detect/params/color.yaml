@@ -1,0 +1,49 @@
+cv_param:
+    # threshold image
+    thd: 2
+
+    # blk must be odd number
+    blk: 1917
+
+    ksize: 22
+    ksize_2: 1
+    
+    boxmin: 40
+    boxmax: 695
+
+    bXr: 28
+    bYt: 41
+    bXl: 44
+    bYb: 21
+
+    # check if the number of detected items is the same as the number of target items assigned in delta_socket/params/common.yaml
+    item_num_bool: True
+
+    volume: 0.00011  # pi*radius^2* depth (radius=0.03, pi*radius^2=0.0028)
+    H: 0.02  # h
+
+    radiusrario: 17.31  # radius(0.03m)*577
+
+    # extrinsic parameter
+    origin_point: [0.5767759, 0.17316037, 1.04308487]
+
+    theta: [-3.12742296, 0.03103302, 0.00601849]
+
+    #point cloud roi [leftupper,rightbottom]
+    #roiimage: [210, 145, 162, 205] # x, y, width, height
+    #for big tray
+    roiimage: [224, 150, 211, 191] # x, y, width, height
+
+    roi_path: "/home/rrc2/Pictures/NUS_test/11_Oct/cam1/roi_1.yml"
+
+    cloudroi:
+     #   - [-0.46711367, -0.09484135, 1.08500004]
+    #    - [-0.03595165,  0.1307708,  1.06700003]
+    #    - [-0.46926627, -0.10157754, 1.09000003]
+    #    - [-0.05965069,  0.1327326,  1.05000007]
+    # for small tray
+        - [-0.14, -0.13, 0.68]
+        - [0.03, 0.11, 0.68]
+    #for large tray
+        # - [-0.13, -0.13, 0.65]
+        # - [0.13, 0.11, 0.64]

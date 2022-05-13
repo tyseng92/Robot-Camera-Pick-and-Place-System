@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!--arg name="" default="" /-->
+    <!-- Uncommend line below to use compressed image version -->
+    <!--arg name="_image_transport" default="compressed"/-->
+
+    <node pkg="pose_server" type="pose_main_astra" name="pose_server" output="screen" respawn="true">
+        <rosparam file="$(find pose_server)/params/astra/common.yaml" command="load" />
+        <rosparam file="$(find image_viewer_capture)/params/path_cam1.yaml" command="load" />
+        <rosparam file="$(find image_viewer_capture)/params/common.yaml" command="load" />
+        <!--remap from="" to="$(arg arg_name)"/-->
+    </node>
+</launch>

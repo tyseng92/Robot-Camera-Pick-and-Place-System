@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: wntu3
+    relative_path: urdf/wntu3.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/wntu3.srdf
+  CONFIG:
+    author_name: steven
+    author_email: steven@gmail.com
+    generated_timestamp: 1645087657

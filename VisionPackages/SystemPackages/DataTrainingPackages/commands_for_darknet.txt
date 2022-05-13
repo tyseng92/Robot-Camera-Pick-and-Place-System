@@ -1,0 +1,2 @@
+command:
+./darknet detector train cfg/sticks.data cfg/sticks_yolov3.cfg darknet53.conv.74 -mjpeg_port 8090 -map

@@ -1,0 +1,21 @@
+depth_pt_ratio: 0.3
+#offset:
+#    path: "/Desktop/image_database/yolo/roi.yml"
+cam_ground_distance: 1.18
+max_tray_height: 0.08
+
+#tray_num: 3
+#w_ratio: 0.20
+#h_ratio: 0.217
+
+tray_num: 1
+w_ratio: 0
+h_ratio: 0
+
+#w_ratio: 0.25
+#h_ratio: 0.2
+inc_ang_y: 0.1078
+inc_ang_z: 0.03
+tri_len: 70
+tri_ang: 90
+offset_brc_b: 0.025

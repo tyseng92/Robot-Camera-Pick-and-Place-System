@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="cam_to_base_transform" type="transform_pub.py" name="cam_to_base_transform" output="screen" required="true"/>
+</launch>

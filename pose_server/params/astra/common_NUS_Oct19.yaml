@@ -1,0 +1,84 @@
+dgn_pt_ratio: 0.3
+
+tray_num: 4
+w_ratio: 0.25
+#w_ratio: 0.30
+#w_ratio: 0.20
+#h_ratio: 0.24
+h_ratio: 0.28
+h_offset: 0
+
+# To change detecting line or triangle, edit common.yaml in image_database package
+#detect_line: false
+#detect_tri: false
+
+# max length value
+line_len: 100
+tri_len: 150
+tri_ang: 90
+
+# set the spreading of depth checking (by how many units)
+depth_spread: 1
+
+# even elements in every list
+# broccoli is divided into 3 sub categories, e.g. broccoli_s_0 and broccoli_s_315 is one sub category for broccoli side and so on.
+categories: 
+    - [sausage_0, sausage_150]              #All_Boxes[0]
+    - [potato_0, potato_315]            #All_Boxes[1]
+    - [tomato, tomato]                  #All_Boxes[2]
+    - [broccoli_s_0, broccoli_s_315, broccoli_t_0, broccoli_t_135, broccoli_b_0, broccoli_b_135]    #All_Boxes[3]
+    - [omelette_0, omelette_135]        #All_Boxes[4]
+
+cat_name:
+    - sausage
+    - potato
+    - tomato
+    - broccoli
+    - omelette
+
+# higher offset(m) -> less z value -> lower the gripper 
+offset:
+    - [0.010]      #sausage
+    - [0.019]        #potato
+    - [0.00975]      #tomato
+    - [0.01854, 0.02391, 0.02107]      #broccoli side top bottom
+    - [0.016]        #omelette
+    #- [0.018]        #omelette
+
+class_name:
+    - sausage_0
+    - sausage_30
+    - sausage_60
+    - sausage_90
+    - sausage_120
+    - sausage_150
+    - potato_0
+    - potato_45
+    - potato_90
+    - potato_135
+    - potato_180
+    - potato_225
+    - potato_270
+    - potato_315
+    - tomato
+    - broccoli_s_0
+    - broccoli_s_45
+    - broccoli_s_90
+    - broccoli_s_135
+    - broccoli_s_180
+    - broccoli_s_225
+    - broccoli_s_270
+    - broccoli_s_315
+    - broccoli_t_0
+    - broccoli_t_45
+    - broccoli_t_90
+    - broccoli_t_135
+    - broccoli_b_0
+    - broccoli_b_45
+    - broccoli_b_90
+    - broccoli_b_135
+    - omelette_0
+    - omelette_45
+    - omelette_90
+    - omelette_135
+    - output_tray

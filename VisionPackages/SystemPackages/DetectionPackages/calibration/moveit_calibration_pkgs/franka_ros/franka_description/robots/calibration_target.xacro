@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+  <xacro:macro name="calibration_target" params="connected_to:='' xyz:='0 0 0' rpy:='0 0 0'">
+    <xacro:unless value="${not connected_to}">
+      <joint name="calibration_target_joint" type="fixed">
+        <parent link="${connected_to}"/>
+        <child link="calibration_target_link"/>
+        <origin rpy="${rpy}" xyz="${xyz}"/>
+      </joint>
+    </xacro:unless>
+    <link name="calibration_target_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 1.57 0" />
+        <geometry>
+          <mesh filename="file://$(find franka_description)/meshes/visual/calibration_target.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 1.57 0" />
+        <geometry>
+          <mesh filename="file://$(find franka_description)/meshes/visual/calibration_target.dae"/>
+        </geometry>
+      </collision>
+      <!-- for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.1"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
+      </inertial>
+      <!-- end for simulation -->
+    </link>
+  </xacro:macro>
+</robot>

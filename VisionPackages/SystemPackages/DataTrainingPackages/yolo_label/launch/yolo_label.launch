@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="yolo_label" type="auto_label.py" name="auto_label" output="screen">
+        <rosparam file="$(find yolo_label)/config/opencv.yaml" command="load"/>
+    </node>
+</launch>

@@ -1,0 +1,42 @@
+hackData: false
+
+hackQueue: False
+queue_list: ["1","1","0","0","1","1"]
+
+data_list: 
+    - [100.0, 100.0, 0.0, 0.0]
+    - [100.0, 100.0, 0.0, 90.0]
+    - [-100.0, 0.0, 0.0, 135.0]
+    - [-100.0, 0.0, 0.0, -135.0]
+
+    #- [-200.0, 100.0, 0.0, 0.0]
+    #- [-50.0, 50.0, 0.0, 45.0]
+    #- [150.0, 150.0, 0.0, 90.0]
+    #- [350.0, 50.0, 0.0, 135.0]
+
+# for auto capturing raw images for documentation purpose
+# To find the captured images, go to "image_database" package, and search for params/zivid/path.yaml.  
+autocapture: true
+
+# fake foods
+#item_list: ["2_potato", "potato", "broccoli", "broccoli", "sausage"]
+#item_list: ["2_potato", "potato", "tomato", "broccoli", "sausage"]
+#item_list: ["potato", "broccoli", "sausage", "tomato"]
+
+# real foods
+#item_list: ["2_potato", "potato", "omelette", "broccoli", "sausage"]
+#item_list: ["potato", "omelette", "broccoli", "sausage"]
+#item_list: ["broccoli", "omelette", "broccoli", "potato"]
+
+# 5 transformation
+#item_list: ["potato", "omelette", "broccoli", "sausage", "2_potato"]
+
+#item_list: ["sausage", "sausage", "sausage", "sausage"]
+#item_list: ["omelette", "omelette", "omelette", "omelette"]
+#item_list: ["2_potato", "omelette", "broccoli", "sausage"]
+
+# opencv_detect
+#item_list: ["object_1", "object_2", "object_3", "object_4", "object_5", "object_6", "object_7", "object_8", "object_9", "object_10"]
+#item_list: ["object_1", "object_2", "object_3", "object_4", "object_5", "object_6", "object_7", "object_8"]
+#item_list: ["object_1", "object_2", "object_3", "object_4", "object_5"]
+item_list: ["object_1"]

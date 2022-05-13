@@ -1,0 +1,17 @@
+cv_param:
+    # threshold image
+    thd: 2
+
+    # blk must be odd number
+    blk: 251
+
+    ksize: 10
+    ksize_2: 1
+    
+    boxmin: 15
+    boxmax: 300
+
+    bXr: 0
+    bYt: 0
+    bXl: 0
+    bYb: 0

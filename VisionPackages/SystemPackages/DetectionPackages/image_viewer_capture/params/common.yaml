@@ -1,0 +1,17 @@
+index: 0 
+name: default
+item_name: "vege"
+# for capturing image for data collection
+capture: true
+
+# display resolution
+res_width: 640
+#res_width: 1080
+res_ratio: 1.333
+#res_width: 1920
+win_x: 0
+win_y: 0
+
+# phoxi cam pcd file location
+gtpath: "/Desktop/image_database/yolo/PHASE_2/cam_groundtruth/pcd/"
+

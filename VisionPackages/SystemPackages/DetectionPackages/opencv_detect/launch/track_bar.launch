@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="opencv_detect" type="bounding_box.py" name="opencv_detect" output="screen" required="true">
+        <rosparam file="$(find opencv_detect)/params/opencv.yaml" command="load"/>
+    </node>
+</launch>

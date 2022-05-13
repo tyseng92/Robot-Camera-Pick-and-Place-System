@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="wntu3" >
+
+  <!-- UR5 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur5.xacro" />
+
+  <!-- Robot Workspace-->
+  <xacro:include filename="$(find wntu3)/urdf/robot_workspace.urdf" />
+
+</robot>

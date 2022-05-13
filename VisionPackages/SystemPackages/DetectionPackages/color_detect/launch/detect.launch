@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="color_detect" type="color_detectQ3.py" name="color_detect" output="screen" required="true">
+        <rosparam file="$(find color_detect)/params/color.yaml" command="load"/>
+        <rosparam file="$(find color_detect)/params/common_cv.yaml" command="load"/>
+    </node>
+</launch>

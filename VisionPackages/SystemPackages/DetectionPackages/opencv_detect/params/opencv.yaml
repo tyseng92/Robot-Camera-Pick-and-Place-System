@@ -1,0 +1,33 @@
+cv_param:
+    # threshold image
+    thd: 2
+
+    # blk must be odd number
+    blk: 1917
+
+    ksize: 22
+    ksize_2: 1
+    
+    boxmin: 40
+    boxmax: 695
+
+    bXr: 28
+    bYt: 41
+    bXl: 44
+    bYb: 21
+
+    # check if the number of detected items is the same as the number of target items assigned in delta_socket/params/common.yaml
+    item_num_bool: True
+
+    volume: 0.00016
+
+    radius: 20
+
+    # extrinsic parameter
+    origin_point: [0.5767759, 0.17316037, 1.04308487]
+
+    theta: [-3.12742296, 0.03103302, 0.00601849]
+
+    #point cloud roi [leftupper,rightbottom]
+    roirange: []
+

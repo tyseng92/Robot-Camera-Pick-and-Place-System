@@ -1,0 +1,5 @@
+classes= 19
+train  = data/phase2_train_3item.txt  
+valid  = data/phase2_test_3item.txt 
+names = data/phase2_3item.names
+backup = backup/phase2_1

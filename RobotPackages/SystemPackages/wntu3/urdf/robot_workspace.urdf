@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="robot_workspace" >
+  <material name="gray">
+    <color rgba="0.56 0.67 0.67 1"/>
+  </material>
+
+  <link name="rbase_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/rbase_link.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/rbase_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wstation_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/wstation_link.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/wstation_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="holder_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/holder_link.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/holder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="astra_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/astra_link.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/astra_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="gripper_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/gripper_link.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://wntu3/meshes/gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="ref_link"/>
+  
+  <joint name="urbaseref_joint" type="fixed"> 
+    <!--origin xyz="0.174318 0.53003 -0.107335" rpy="0.044168 -0.009258 -${pi/2}"/-->
+    <origin xyz="0.174759 0.534227 -0.093483" rpy="-0.000291 -0.009223 -1.58501"/>   
+    <parent link="base" />
+    <child link="ref_link" />
+  </joint> 
+  
+  <joint name="refstation_joint" type="fixed">
+    <origin xyz="0.535 0.330 0" rpy="0 0 0"/>
+    <parent link="ref_link"/>
+    <child link="wstation_link"/>
+  </joint>
+  
+  <joint name="stationrbase_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="wstation_link" />
+    <child link="rbase_link" />
+  </joint>
+
+  <joint name="holder_joint" type="fixed">
+    <origin xyz="0 0 0.121" rpy="0 0 0" />
+    <parent link="tool0" />
+    <child link="holder_link" />
+  </joint>
+
+  <joint name="holdergripper_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="holder_link" />
+    <child link="gripper_link" />
+  </joint>
+  
+  <joint name="holderastra_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="holder_link" />
+    <child link="astra_link" />
+  </joint>
+  
+</robot>
+  

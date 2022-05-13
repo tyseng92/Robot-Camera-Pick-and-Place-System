@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!--arg name="" default="" /-->
+    <!-- Uncommend line below to use compressed image version -->
+    <!--arg name="_image_transport" default="compressed"/-->
+    <node pkg="pose_server" type="depth_main_astra" name="depth_server" output="screen" respawn="true">
+        <rosparam file="$(find pose_server)/params/astra/common.yaml" command="load" />
+    </node>
+</launch>

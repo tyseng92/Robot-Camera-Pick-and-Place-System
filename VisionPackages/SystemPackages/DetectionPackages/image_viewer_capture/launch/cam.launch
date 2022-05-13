@@ -1,0 +1,12 @@
+<launch>
+    <node name="image_view_camA" pkg="image_view" type="image_view" respawn="false" output="screen">
+        <remap from="image" to="/camera_01/rgb/image_rect_color" />
+        <param name="filename_format" value="/home/rrc/Pictures/PHASE_2/image/camA/camA_%04i.jpg" />
+        <param name="autosize" value="false" />
+    </node>
+    <node name="image_view_camB" pkg="image_view" type="image_view" respawn="false" output="screen">
+        <remap from="image" to="/camera_02/rgb/image_rect_color" />
+        <param name="filename_format" value="/home/rrc/Pictures/PHASE_2/image/camB/camB_%04i.jpg" />
+        <param name="autosize" value="false" />
+    </node>
+</launch>

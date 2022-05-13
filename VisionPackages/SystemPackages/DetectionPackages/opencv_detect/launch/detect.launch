@@ -1,0 +1,8 @@
+<launch>
+    <arg name="sub_1" default="multiastra_subscriber1"/>
+    <node pkg="opencv_detect" type="detect.py" name="opencv_detect" output="screen" required="true">
+        <rosparam file="$(find opencv_detect)/params/opencv.yaml" command="load"/>
+        <rosparam file="$(find opencv_detect)/params/common_cv.yaml" command="load"/>
+        <remap from="/astra/cpp_image_node/image_roi" to="$(arg sub_1)/astra/cpp_image_node/image_roi"/>
+    </node>
+</launch>

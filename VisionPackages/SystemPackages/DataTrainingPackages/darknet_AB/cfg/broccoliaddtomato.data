@@ -1,0 +1,5 @@
+classes= 31
+train  = data/train_two.txt  
+valid  = data/test_two.txt  
+names = data/broccoliaddtomato.names  
+backup = backup/

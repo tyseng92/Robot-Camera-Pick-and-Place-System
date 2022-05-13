@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!--arg name="" default="" /-->
+    
+    <!-- Uncommend line below to use compressed image version, use "rosrun rqt_reconfigure rqt_reconfigure" and adjust param of "/zivid_camera/color/image_color/compressed" -->
+    <arg name="transport_type" default="compressed"/>
+    <arg name="sub_1" default="multiastra_subscriber1"/>
+    <arg name="sub_2" default="multiastra_subscriber2"/>
+    <node pkg="image_viewer_capture" type="multiastra_subscriber" name="$(arg sub_1)" output="screen" respawn="false">
+        <rosparam file="$(find image_viewer_capture)/params/common.yaml" command="load" />
+        <rosparam file="$(find image_viewer_capture)/params/path_cam1.yaml" command="load" /> 
+        <param name="image_transport" value="$(arg transport_type)"/>
+        <remap from="/astra/cpp_image_node/image_roi" to="$(arg sub_1)/astra/cpp_image_node/image_roi"/>
+        <!--param name="" value=""/-->
+        <!--remap from="" to="$(arg arg_name)"/-->
+    </node>
+    <node pkg="image_viewer_capture" type="multiastra_subscriber" name="$(arg sub_2)" output="screen" respawn="false">
+        <rosparam file="$(find image_viewer_capture)/params/common.yaml" command="load" />
+        <rosparam file="$(find image_viewer_capture)/params/path_cam2.yaml" command="load" /> 
+        <param name="image_transport" value="$(arg transport_type)"/>
+        <remap from="/astra/cpp_image_node/image_roi" to="$(arg sub_2)/astra/cpp_image_node/image_roi"/>
+        <!--param name="" value=""/-->
+        <!--remap from="" to="$(arg arg_name)"/-->
+    </node>
+</launch>

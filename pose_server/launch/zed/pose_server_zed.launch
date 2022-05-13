@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    <!--arg name="" default="" /-->
+    <!-- Uncommend line below to use compressed image version -->
+    <!--arg name="_image_transport" default="compressed"/-->
+
+    <node pkg="pose_server" type="pose_main_zed" name="pose_server" output="screen">
+        <rosparam file="$(find pose_server)/params/zed/common.yaml" command="load" />
+        <rosparam file="$(find image_database)/params/zed/path.yaml" command="load" />
+        <!--remap from="" to="$(arg arg_name)"/-->
+    </node>
+</launch>

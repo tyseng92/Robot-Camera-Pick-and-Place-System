@@ -1,0 +1,5 @@
+classes= 31
+train  = data/train_item_4.txt  
+valid  = data/test_item_4.txt  
+names = data/item_4.names  
+backup = backup/

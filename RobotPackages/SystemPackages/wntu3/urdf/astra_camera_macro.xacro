@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- <robot name="astra_camera"> -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="astra_camera_macro">
+  <xacro:macro name="astra_camera" params="prefix">
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+
+    <link name="${prefix}_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 ${M_PI}"/>
+            <geometry>
+                <mesh filename="package://wntu3/meshes/astra_link.STL" />
+            </geometry>
+            <material name="light_grey">
+                <color rgba="0.8 0.8 0.8 0.8"/>
+            </material>
+        </visual>
+    </link>
+    <link name="${prefix}_depth_frame"/>
+    <link name="${prefix}_depth_optical_frame"/>
+    <link name="${prefix}_rgb_frame"/>
+    <link name="${prefix}_rgb_optical_frame"/>
+
+    <joint name="${prefix}_rgb_joint" type="fixed">
+        <parent link="${prefix}_rgb_frame"/>
+        <child link="${prefix}_link"/>
+        <origin xyz="-0.045 0 0" rpy="0 0 0" />
+    </joint>
+
+    <joint name="${prefix}_rgb_optical_joint" type="fixed">
+        <parent link="${prefix}_rgb_optical_frame"/>
+        <child link="${prefix}_rgb_frame"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <joint name="${prefix}_depth_joint" type="fixed">
+        <parent link="${prefix}_link"/>
+        <child link="${prefix}_depth_frame"/>
+        <origin xyz="0.02 0 0" rpy="0 0 0" />
+    </joint>
+
+    <joint name="${prefix}_depth_optical_joint" type="fixed">
+        <parent link="${prefix}_depth_frame"/>
+        <child link="${prefix}_depth_optical_frame"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+  </xacro:macro>
+</robot>

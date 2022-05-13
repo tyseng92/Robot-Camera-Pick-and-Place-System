@@ -1,0 +1,22 @@
+img_topic: "/camera_01/rgb/image_rect_color" 
+pcl_topic: "/camera_01/depth_registered/points"
+#img_topic: "/camera/color/image_raw" 
+#pcl_topic: "/camera/depth/color/points"
+tray_id: "/camera_01/tray_id"
+window_name: "Astra Cam 1"
+cap_button: 'f'
+roi_button: 'r'
+#imgpath: "/Pictures/PHASE_2/cam1/image/"
+#filepath: "/Pictures/PHASE_2/cam1/num.txt"
+#rectpath: "/Pictures/PHASE_2/cam1/roi.yml"
+#pclpath: "/Pictures/PHASE_2/cam1/pcd/"
+imgpath: "/Pictures/NUS_test/11_Oct/cam1/image/"
+filepath: "/Pictures/NUS_test/11_Oct/cam1/num.txt"
+rectpath_1: "/Pictures/NUS_test/11_Oct/cam1/roi_1.yml"
+rectpath_2: "/Pictures/NUS_test/11_Oct/cam1/roi_2.yml"
+pclpath: "/Pictures/NUS_test/11_Oct/cam1/pcd/"
+roi:
+  x: 168
+  y: 160
+  width: 224
+  height: 224
